@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ASEAN Scholarship - Interview Prep</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',Tahoma,sans-serif;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);min-height:100vh;padding:12px;-webkit-tap-highlight-color:transparent}
+        .container{max-width:920px;margin:0 auto;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.4);overflow:hidden}
+        .header{background:linear-gradient(135deg,rgba(15,32,39,.88),rgba(44,83,100,.88)),url('https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&w=1200') center/cover;color:#fff;padding:30px 20px 22px;text-align:center;position:relative}
+        .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#e74c3c,#fff,#e74c3c)}
+        .header h1{font-size:1.6em;margin-bottom:3px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+        .header p{opacity:.9;font-size:.88em}
+        .sg-icons{display:flex;justify-content:center;gap:6px;margin:10px 0 6px;flex-wrap:wrap}
+        .sg-icons img{width:46px;height:46px;border-radius:50%;border:2px solid rgba(255,255,255,.7);object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,.3);transition:transform .3s}
+        .sg-icons img:hover{transform:scale(1.18)}
+        .pbar{background:rgba(255,255,255,.15);border-radius:8px;height:9px;margin-top:10px;overflow:hidden}
+        .pfill{background:linear-gradient(90deg,#00c9ff,#92fe9d);height:100%;border-radius:8px;transition:width .5s}
+        .ptxt{margin-top:5px;font-size:.78em;opacity:.85}
+        .banner{width:100%;height:140px;object-fit:cover;display:block}
+        .tabs{display:flex;background:#f5f5f5;border-bottom:2px solid #e0e0e0;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+        .tabs::-webkit-scrollbar{display:none}
+        .tab{padding:10px 13px;cursor:pointer;font-size:.75em;font-weight:600;color:#666;border-bottom:3px solid transparent;transition:all .3s;white-space:nowrap;flex-shrink:0}
+        .tab:hover{color:#2c5364;background:#e0f2f1}
+        .tab.active{color:#2c5364;border-bottom-color:#2c5364;background:#fff}
+        .cnt{padding:22px}
+        .card{background:#f8f9fa;border-radius:11px;padding:16px;margin-bottom:16px;border-left:4px solid #2c5364}
+        .card h3{color:#0f2027;margin-bottom:7px;font-size:1em}
+        .card p,.card li{color:#444;line-height:1.7;font-size:.9em}
+        .card ul{padding-left:18px}
+        .qbox{background:#fff8e1;border:1px solid #ffca28;border-radius:9px;padding:13px;margin:9px 0}
+        .qbox strong{color:#e65100}
+        .abox{background:#e8f5e9;border:1px solid #4caf50;border-radius:9px;padding:13px;margin:7px 0;display:none}
+        .abox strong{color:#1b5e20}
+        .tbox{background:#e3f2fd;border:1px solid #42a5f5;border-radius:9px;padding:13px;margin:7px 0}
+        .tbox strong{color:#0d47a1}
+        .ebox{background:#fce4ec;border:1px solid #e91e63;border-radius:9px;padding:13px;margin:7px 0}
+        .ebox strong{color:#880e4f}
+        .nbox{background:#ede7f6;border:1px solid #7e57c2;border-radius:9px;padding:13px;margin:7px 0}
+        .nbox strong{color:#311b92}
+        .btn{padding:8px 16px;border:none;border-radius:7px;cursor:pointer;font-weight:600;font-size:.82em;transition:all .3s;margin:3px}
+        .btn-p{background:linear-gradient(135deg,#2c5364,#0f2027);color:#fff}
+        .btn-p:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(44,83,100,.4)}
+        .btn-s{background:#ff8f00;color:#fff}
+        .btn-g{background:#2e7d32;color:#fff}
+        .btn-b{background:#1565c0;color:#fff}
+        .cklist{list-style:none;padding:6px 0}
+        .cklist li{padding:8px 4px;border-bottom:1px solid #eee;cursor:pointer;font-size:.88em}
+        .cklist li:hover{background:#f5f5f5}
+        .cklist li.done{color:#2e7d32;text-decoration:line-through}
+        .cklist li::before{content:"☐ ";font-size:1.1em}
+        .cklist li.done::before{content:"☑ "}
+        .badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:.7em;font-weight:700;margin-bottom:7px}
+        .bw1{background:#bbdefb;color:#0d47a1}
+        .bw2{background:#fff9c4;color:#f57f17}
+        .bw3{background:#c8e6c9;color:#1b5e20}
+        .bex{background:#f8bbd0;color:#880e4f}
+        .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:7px;margin:10px 0}
+        .gal-i{border-radius:9px;overflow:hidden;position:relative;height:82px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+        .gal-i img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+        .gal-i:hover img{transform:scale(1.08)}
+        .gal-i span{position:absolute;bottom:0;left:0;right:0;padding:10px 4px 3px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:#fff;font-size:.65em;font-weight:600;text-align:center}
+        .rlink{display:block;padding:10px 13px;margin:6px 0;background:#fafafa;border-radius:7px;border-left:3px solid #2c5364;text-decoration:none;color:#333;transition:all .3s}
+        .rlink:hover{background:#e0f2f1;transform:translateX(3px)}
+        .rlink .rt{font-weight:600;color:#0f2027;font-size:.88em}
+        .rlink .rd{font-size:.78em;color:#666;margin-top:1px}
+        .rbadge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:.62em;font-weight:700;margin-right:5px;color:#fff}
+        .sg-sec{margin-bottom:22px}
+        .sg-sec h3{color:#0f2027;margin-bottom:7px;font-size:1.05em;border-bottom:2px solid #e0e0e0;padding-bottom:5px}
+        .sg-sec p{color:#333;line-height:1.8;font-size:.9em;margin-bottom:8px}
+        .hr{border:none;border-top:1px dashed #ddd;margin:12px 0}
+        .hidden{display:none}
+        @media(max-width:768px){body{padding:6px}.header{padding:18px 12px 15px}.header h1{font-size:1.25em}.banner{height:100px}.cnt{padding:13px}.card{padding:13px}.gal{grid-template-columns:repeat(auto-fit,minmax(90px,1fr))}.gal-i{height:65px}}
+        @media(max-width:400px){body{padding:3px}.header h1{font-size:1.1em}.tab{padding:8px 9px;font-size:.68em}.cnt{padding:9px}.btn{width:100%;margin:3px 0}}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>🇸🇬 ASEAN Scholarship Interview Prep</h1>
+        <p>3 Weeks &bull; 10 Rounds &bull; Expert-Level Mastery</p>
+        <div class="sg-icons">
+            <img src="https://images.pexels.com/photos/777059/pexels-photo-777059.jpeg?auto=compress&cs=tinysrgb&w=100" alt="MBS" title="Marina Bay Sands">
+            <img src="https://images.pexels.com/photos/2804038/pexels-photo-2804038.jpeg?auto=compress&cs=tinysrgb&w=100" alt="MBS Night" title="Marina Bay Night">
+            <img src="https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=100&q=80" alt="Gardens" title="Gardens by the Bay">
+            <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=100&q=80" alt="Skyline" title="Singapore Skyline">
+        </div>
+        <div class="pbar"><div class="pfill" id="pf" style="width:0%"></div></div>
+        <div class="ptxt" id="pt">0/10 rounds completed</div>
+    </div>
+    <img class="banner" src="https://images.pexels.com/photos/2804038/pexels-photo-2804038.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Marina Bay Sands Singapore">
+    <div class="tabs" id="tabs"></div>
+    <div class="cnt" id="main"></div>
+    <div class="cnt hidden" id="sgPage"></div>
+    <div class="cnt hidden" id="skPage"></div>
+    <div class="cnt hidden" id="resPage"></div>
+</div>
+<script>
+// ===== DATA =====
+const M = [
+{id:1,title:"Self-Introduction",week:1,sub:"Introduce yourself naturally in 2 minutes",
+know:["STAR framework: Situation-Task-Action-Result","Hook opening: a short story or standout achievement","Connect your intro to why you're applying","Keep it 1.5-2 minutes, conversational tone","Show personality - never sound rehearsed or robotic"],
+questions:[
+{q:"Tell me about yourself.",a:"Structure: Name & school → 1-2 academic highlights → 1 meaningful activity → Future goal linked to Singapore. Example: 'I'm [Name] from [City]. At [School], I discovered my love for [subject] when I [specific moment]. Outside class, I [activity] which taught me [skill]. I'm drawn to Singapore because [reason].'",tip:"Practice like you're chatting with a friendly uncle, not reading a script. Record yourself - if it sounds memorized, start over.",natural:"DON'T memorize word-for-word. Instead, memorize KEY POINTS and practice telling your story differently each time. Real conversations have pauses, 'you know', and natural flow. The panel wants to meet YOU, not a presentation."},
+{q:"What are your strengths and weaknesses?",a:"Strengths: Pick 2 with PROOF (e.g., 'I'm persistent - when I failed my first Math Olympiad, I practiced 2 hours daily and placed 3rd next year'). Weakness: Be REAL but show growth ('I used to avoid asking for help, thinking I should figure everything out alone. Now I've learned that collaboration makes me stronger').",tip:"Never say 'perfectionism' as a weakness. Panels have heard it 10,000 times. Be genuine - they respect self-awareness more than a perfect image.",natural:"Speak about weaknesses like you'd tell a trusted mentor - honest, a bit vulnerable, but showing you've reflected on it. This is where authenticity wins."},
+{q:"Describe a challenge you've overcome.",a:"Tell it like a story: Set the scene → What went wrong → How you felt (be honest) → What you did step by step → What changed. Make the panel feel like they're there with you.",tip:"Small challenges told well beat big challenges told poorly. 'Learning to cook for myself when mom was sick for a month' is more relatable than vague claims about 'overcoming poverty'.",natural:"Let emotion show naturally. It's OK to say 'I was really scared' or 'I almost gave up'. Vulnerability + resilience = memorable."}
+],checklist:["Written a 2-min intro (not memorized word-for-word)","Practiced telling it 5+ different ways","Recorded and listened back - sounds natural?","Got feedback from teacher or friend","Prepared 3 STAR stories I can tell like a friend"]},
+
+{id:2,title:"Why Singapore",week:1,sub:"Articulate your genuine motivation",
+know:["Singapore education: #1 PISA globally, bilingual policy, meritocracy","Hub for finance, tech, biomedical sciences in Asia","Multicultural: Chinese, Malay, Indian, Eurasian harmony","ASEAN Scholarship values: excellence + leadership + service","Bond period: 3-6 years working in Singapore after graduation"],
+questions:[
+{q:"Why do you want to study in Singapore?",a:"Be SPECIFIC and PERSONAL: 'When I read about [specific program/professor/initiative] at [school], I realized Singapore offers exactly what I need to [your goal]. Plus, living in a multicultural society where [specific detail about SG life] excites me because [personal reason].'",tip:"Generic answers like 'good education' kill your chances. Research ONE specific thing about your target school that genuinely excites you. Name it. That's what separates winners.",natural:"Talk about Singapore like you'd describe a place you've been dreaming about. What SPECIFICALLY makes your eyes light up? That energy is contagious."},
+{q:"Why should we give you this scholarship?",a:"Frame it as MUTUAL VALUE: 'This scholarship invests in students who'll contribute to Singapore and ASEAN. Here's what I bring: [academic strength], [leadership proof], and [vision for contribution]. Specifically, I plan to [concrete action] that bridges Vietnam and Singapore.'",tip:"Don't beg or just list achievements. Show you understand it's an INVESTMENT and explain the RETURN. What will Singapore get from betting on you?",natural:"Imagine you're pitching to a friend's parents why they should let you join their family trip - you'd show enthusiasm AND responsibility."},
+{q:"What do you know about Singapore's education system?",a:"Show DEPTH not breadth: Pick 2-3 points you genuinely find interesting. E.g., 'I'm fascinated by how Singapore's emphasis on bilingualism creates graduates who can navigate both Asian and Western business worlds. Also, the applied learning approach - like NTU's Renaissance Engineering...'",tip:"Don't list facts like Wikipedia. Pick aspects that CONNECT to your interests. The panel wants to see you've thought about WHY these matter to YOU.",natural:"Talk about it like you'd discuss a cool discovery with a classmate - with genuine curiosity, not like reciting a textbook."}
+],checklist:["Researched target school in detail (specific programs)","Can name 3 specific things about SG that excite me","Understand bond period and I'm genuinely OK with it","Linked my personal goals to Singapore specifically","Can explain my value proposition in 30 seconds"]},
+
+{id:3,title:"Academic & Goals",week:1,sub:"Show intellectual curiosity, not just good grades",
+know:["Know your GPA context (top X% of class)","Highlight subjects you're PASSIONATE about, not just good at","SMART goals: Specific, Measurable, Achievable, Relevant, Time-bound","Connect academic strengths to career vision","Show curiosity: self-directed projects, reading, experiments"],
+questions:[
+{q:"What is your favorite subject and why?",a:"Tell the ORIGIN STORY of your passion: 'I fell in love with Physics the day my teacher showed us how a bridge stays up. I went home and spent 3 hours building models. Since then, I've [specific thing you did on your own]. What fascinates me most is [specific area].'",tip:"Passion is shown through ACTIONS you took without being asked. What did you do outside of homework? That's what proves it's real.",natural:"Your eyes should light up when you talk about this. If they don't, pick a different subject. The panel reads energy better than words."},
+{q:"Where do you see yourself in 10 years?",a:"Be honest and flexible: 'In 10 years, I see myself [specific role/field]. The path might change, but my direction is clear: I want to [core purpose]. Singapore gives me [specific stepping stone]. Whether I end up in [option A] or [option B], I'll be contributing to [bigger picture].'",tip:"It's OK to say 'I'm not 100% sure yet' IF you follow with 'but here's the direction I'm heading and why.' Panels respect honest ambition over fake certainty.",natural:"Talk about your future like you'd share a dream with a close friend - excited but grounded. Not a rehearsed speech."},
+{q:"How do you handle academic pressure?",a:"Share your REAL system: 'Honestly, I've had moments of being overwhelmed. During [specific time], I learned that [strategy] works for me. Now my routine is [specific habits]. When it gets really tough, I [coping mechanism]. The key lesson was [insight].'",tip:"Singapore is INTENSE academically. They need to believe you won't crack. Show self-awareness about stress AND proven coping strategies.",natural:"Be real - everyone struggles. Saying 'I never feel pressure' sounds fake. 'I feel it, and here's how I deal with it' sounds human and strong."}
+],checklist:["Summarized top academic achievements with context","Written 5-year and 10-year vision (flexible, not rigid)","Prepared passion story about favorite subject","Researched intended major at Singapore schools","Can explain any grade dip in my transcript honestly"]},
+
+{id:4,title:"Leadership & ECA",week:2,sub:"Show impact through initiative, not just titles",
+know:["Leadership = taking initiative, not holding a title","Quality over quantity: 2 deep involvements > 10 surface ones","Measure impact with numbers where possible","Community service shows you care beyond yourself","Connect activities to skills and personal growth"],
+questions:[
+{q:"Tell me about your leadership experience.",a:"Tell it as a JOURNEY, not a resume bullet: 'In [Club], I noticed [problem]. Nobody was addressing it, so I [first step]. It wasn't easy - [challenge]. I rallied [people] by [approach]. In the end, we [result with numbers]. The biggest thing I learned was [insight about leadership].'",tip:"No title needed. 'I organized a study group for struggling classmates and 8 out of 10 improved their grades' IS leadership. Initiative + impact = leadership.",natural:"Tell it like you're sharing a proud memory. Let your face show the pride. Panels remember stories told with feeling, not corporate-speak."},
+{q:"What extracurricular activities are you involved in?",a:"Pick 2-3 and go DEEP: For each, share your journey - 'I started [activity] in grade [X] because [reason]. Over [time], I grew from [beginner role] to [current role]. The most meaningful moment was when [specific incident]. It taught me [life lesson].'",tip:"Don't list 15 activities. Pick ones where you can tell a genuine story. Depth impresses more than breadth. Show COMMITMENT over time.",natural:"Imagine showing a friend photos from your activities. What stories would you tell? Those natural anecdotes are exactly what panels want."},
+{q:"How do you contribute to your community?",a:"Show MOTIVATION first: 'I started [service] because [personal reason - saw someone struggle, experienced something]. I've been doing it for [duration]. What keeps me going is [genuine motivation]. The impact: [specific numbers/stories]. It changed my perspective on [insight].'",tip:"One-time events are fine but CONSISTENCY impresses more. If you've done something regularly for months/years, that shows character.",natural:"Don't make it sound like charity PR. Talk about it like telling a friend what you do on weekends. Natural, proud, but not boasting."}
+],checklist:["Listed all activities with roles and duration","Chosen top 3 with compelling STAR stories","Quantified impact (how many people, what results)","Prepared leadership story without a formal title","Connected each activity to a skill or value I gained"]},
+
+{id:5,title:"Critical Thinking",week:2,sub:"Show you can think, not just memorize",
+know:["Structure: Claim → Evidence → Reasoning → Counter-argument","Always acknowledge multiple perspectives before taking a stance","Singapore education values analytical depth over memorization","Types: hypothetical scenarios, ethical dilemmas, opinion questions","Technique: Think out loud - show your reasoning PROCESS"],
+questions:[
+{q:"If you could solve one problem in Vietnam, what would it be?",a:"Pick something SPECIFIC you genuinely care about: 'The problem I care most about is [specific issue, e.g., mental health awareness among Vietnamese students]. I care because [personal connection]. The root cause isn't just [surface reason], it's [deeper analysis]. I'd approach it by [realistic step 1, 2, 3]. It won't be easy because [honest challenge], but I believe [why it's worth trying].'",tip:"Choose something SMALL and SPECIFIC over big and vague. 'Reducing food waste in my school district' beats 'ending poverty.' Show you've actually THOUGHT about it.",natural:"It's OK to pause and think. Say 'That's interesting, let me think about this...' Panels WANT to see you reasoning in real-time, not reciting a prepared speech."},
+{q:"Should AI replace teachers in the future?",a:"Show nuanced thinking: 'My honest take? It's not a yes-or-no question. AI excels at [specific things: personalization, data tracking, 24/7 availability]. But it can't [specific things: inspire, read emotions, mentor through tough times]. I think the future is AI as a teacher's superpower, not replacement. For example, [specific scenario].'",tip:"NEVER give a one-sided answer. Show you see complexity. Start with 'It depends on...' or 'There's more to this than meets the eye...' Then take a clear position WITH nuance.",natural:"Discuss it like you're debating with a smart friend over lunch. It's OK to say 'I keep going back and forth, but ultimately I lean toward...'"},
+{q:"What would you do if you disagreed with a teacher?",a:"Show intellectual courage WITH respect: 'First, I'd make sure I truly understand their perspective - maybe I'm missing something. If I still disagree after reflection, I'd approach them privately: \"Sir/Ma'am, I've been thinking about X and I see it differently because [evidence]. Could you help me understand your perspective better?\" The goal isn't to win, it's to learn.'",tip:"They want to see you're not a pushover AND not disrespectful. The magic word is 'curious' - approach disagreement with curiosity, not confrontation.",natural:"This is about CHARACTER. Show that you think independently but communicate respectfully. Real-life example is gold here."}
+],checklist:["Practiced structured arguments on 5 hot topics","Can think out loud without panicking","Prepared opinions on AI, climate, education, ASEAN issues","Practiced acknowledging counter-arguments","Can say 'I don't know, but here's how I'd think about it'"]},
+
+{id:6,title:"Current Affairs",week:2,sub:"Show you're informed and can analyze, not just recite",
+know:["Singapore: Smart Nation, Green Plan 2030, HDB housing, CPF system, Forward SG","ASEAN: AEC, RCEP, digital economy, South China Sea, youth employment","Vietnam: economic growth, FDI hub, digital transformation, Vietnam-SG relations","Bilateral: Strategic Partnership 2013, VSIP parks, SG is top 3 FDI into Vietnam","Trends: AI revolution, climate change, aging populations, Industry 4.0"],
+questions:[
+{q:"What do you know about Singapore-Vietnam relations?",a:"Go beyond facts to SIGNIFICANCE: 'Singapore and Vietnam have a Strategic Partnership since 2013, but what impresses me most is how PRACTICAL it is. VSIP industrial parks aren't just FDI - they transferred urban planning know-how. Singapore is one of Vietnam's biggest investors, and education exchange is growing. I see this scholarship as part of that people-to-people bridge.'",tip:"Connect it to YOURSELF. Why does this relationship matter to YOU personally? 'I want to be part of strengthening this bridge' is powerful if genuine.",natural:"Talk about bilateral relations like you're explaining to a friend why this matters to you personally. Facts + personal connection = compelling."},
+{q:"What is one current issue in ASEAN that concerns you?",a:"Pick ONE and go deep: 'The digital divide across ASEAN worries me because [personal observation]. In Vietnam, I see [specific example]. Meanwhile, Singapore has [contrast]. This matters because [consequence]. ASEAN's Digital Masterplan is a start, but I think young people like me can [your idea]. That's partly why I want to study in Singapore - to learn how they built their digital infrastructure and bring insights home.'",tip:"Choose something you GENUINELY follow. If you read about it just for the interview, it'll show. Pick your real interest and go deep.",natural:"Show you've THOUGHT about this before the interview existed. Reference a specific article, video, or conversation that sparked your interest."},
+{q:"How can young people contribute to ASEAN integration?",a:"Make it PERSONAL and SPECIFIC: 'I think young people are already doing it through social media and travel, but we can do more. Specifically, I plan to [your concrete idea]. Studying in Singapore with classmates from 10 ASEAN countries is step one. I want to [specific project/initiative]. ASEAN's future depends on our generation seeing ourselves as Southeast Asian first.'",tip:"Don't give generic answers. What will YOU specifically do? One concrete plan beats ten vague ideas.",natural:"Talk about ASEAN like it's YOUR community, not a textbook concept. If you've met people from other ASEAN countries, share that story."}
+],checklist:["Read about SG Smart Nation initiative this week","Know 5 facts about Vietnam-Singapore relations","Understand ASEAN Economic Community basics","Read at least 2 current news articles about ASEAN","Can share my OPINION (not just facts) on 2 issues"]},
+
+{id:7,title:"Cross-cultural",week:2,sub:"Show you can thrive in diversity, not just survive",
+know:["Singapore: 4 official languages, racial harmony is a core value","Culture shock stages: Honeymoon → Frustration → Adjustment → Mastery","Singlish, hawker culture, kiasu mentality, MRT etiquette","Vietnamese strengths abroad: family values, resilience, adaptability, food culture","Key: Curious, not judgmental. Flexible, not lost."],
+questions:[
+{q:"How will you adapt to living in Singapore?",a:"Show you've IMAGINED it: 'I've thought about this a lot. The food will be amazing - I want to try every hawker center. The academic intensity will be a jump, but I'll [strategy]. Socially, I plan to [specific: join clubs, make local friends, explore neighborhoods]. What excites me most is [genuine detail]. What might be hard is [honest challenge] and I'll handle it by [plan].'",tip:"Mention SPECIFIC things about Singapore life: hawker centers, MRT, HDB flats, National Day, Racial Harmony Day. Show you've done homework about DAILY LIFE, not just education.",natural:"Talk about it like describing a trip you're genuinely excited about. Nervous + excited = exactly the right energy. Don't pretend you won't miss home."},
+{q:"Have you ever interacted with people from different cultures?",a:"If yes: Tell the story with FEELING. 'I met [person] at [context]. At first, [challenge/surprise]. Then [turning point]. What I learned was [insight about myself].' If limited: Be HONEST. 'My direct experience is limited, but I've [online interactions/books/films/events]. I know I have so much to learn, and that's exactly why Singapore excites me.'",tip:"HONESTY wins over fake stories. If your experience is limited, own it. 'I haven't traveled much, but I'm hungry for cross-cultural experiences - that's a big reason I'm applying' is powerful.",natural:"Tell cross-cultural stories like you'd tell a friend about someone interesting you met. The curiosity and surprise should show."},
+{q:"What will you miss most about Vietnam?",a:"Be REAL and WARM: 'I'll miss [specific thing - mom's cooking, morning pho runs with dad, my friends' group chat, the sound of motorbikes]. But I've thought about it, and missing home means I have something worth coming back for. I plan to stay connected by [method] while fully embracing Singapore. I think having roots makes you stronger abroad, not weaker.'",tip:"This tests emotional maturity. They want to see: you HAVE deep connections (you're not running away), AND you can handle being away (you won't collapse).",natural:"It's OK to get a little emotional here. Missing your family shows you're human. Just follow it with strength and excitement about the future."}
+],checklist:["Researched Singapore daily life (food, transport, culture)","Prepared a cross-cultural story (even if small)","Can describe Vietnamese culture in English enthusiastically","Practiced talking about missing home with maturity","Know about Racial Harmony Day, National Day, festivals"]},
+
+{id:8,title:"Expert Round: Deep Scenarios",week:3,sub:"Level up: Complex questions that test your thinking depth",
+know:["Panel may test how you handle UNEXPECTED questions","No perfect answer - they watch HOW you think, not WHAT you say","Ethical dilemmas test values and reasoning process","Hypothetical questions reveal creativity and maturity","Being comfortable saying 'I don't know, but...' is a STRENGTH"],
+questions:[
+{q:"[EXPERT] You discover your best friend is cheating on an important exam. What do you do?",a:"Show moral reasoning + empathy: 'This is genuinely hard. My friendship matters, but so does integrity. I'd first talk to my friend privately - understand why they felt they had to cheat. Are they under impossible pressure? Do they need help? Then I'd encourage them to come forward themselves. If they refused and I knew it was unfair to other students... I'd have to weigh my values. Integrity isn't easy when it costs you something.'",tip:"This tests your VALUES under pressure. There's no single right answer, but show: (1) You don't take the easy road, (2) You show empathy even when being principled, (3) You've thought about the complexity.",natural:"Think out loud. Say 'Hmm, this is tough because...' Show the panel your actual reasoning process. Pausing to think shows maturity, not weakness."},
+{q:"[EXPERT] If Singapore offered you a job after graduation but Vietnam needed you back urgently, what would you choose?",a:"Show thoughtfulness: 'I think about this. My bond to Singapore is both legal and moral - they invested in me. But my country matters deeply too. Honestly, I'd look for ways to serve BOTH: Could I work in a field that strengthens Vietnam-Singapore ties? Could I fulfill my bond while creating connections that help Vietnam? I don't see it as either/or. The best outcome is being a bridge between both countries.'",tip:"They're testing loyalty + integrity + creative thinking. Don't say you'd break the bond (red flag), but show genuine love for Vietnam. 'Being a bridge' is the ideal answer framework.",natural:"Be honest about the tension. It's OK to say 'I think about this a lot and I don't have a perfect answer, but here's my current thinking...'"},
+{q:"[EXPERT] A classmate from another country makes a negative comment about Vietnam. How do you respond?",a:"Show confidence without aggression: 'First, I'd take a breath - my initial reaction might be defensive, but that never helps. Then I'd get curious: \"What made you think that? I'd love to share a different perspective.\" Most stereotypes come from limited exposure. I'd share my genuine experience of Vietnam - the innovation, the resilience, the culture. If they're genuinely disrespectful, I'd calmly say \"I respect your right to your opinion, but that doesn't match my lived experience\" and move on.'",tip:"Tests: Can you represent your country with PRIDE without being aggressive? Can you handle conflict maturely? The answer combines: dignity + curiosity + calm + patriotism.",natural:"This is about CONFIDENCE, not anger. Practice the tone: firm, warm, inviting dialogue. 'Let me show you the Vietnam I know' is powerful."},
+{q:"[EXPERT] If you had to give up one: academic success OR friendships during your time in Singapore, which would you sacrifice?",a:"Refuse the false binary: 'Honestly? I'd push back on the premise. In my experience, they're connected - my best academic moments happened because of study groups and supportive friends. But if truly forced... I'd say academic success without meaningful relationships would feel empty. The people I meet in Singapore will be my network, my support system, my future collaborators. Grades get you in the door, but relationships determine the journey.'",tip:"Trick questions test whether you think independently or just pick an answer. It's OK to challenge the premise, then give a thoughtful response anyway. Shows intellectual courage.",natural:"Say 'Can I think about this for a moment?' Take 5 seconds. Then speak honestly. The pause shows thoughtfulness, not ignorance."}
+],checklist:["Practiced handling unexpected questions without panicking","Can think out loud for 30 seconds before answering","Prepared responses to ethical dilemmas","Comfortable saying 'I need a moment to think'","Practiced disagreeing respectfully with a premise"]},
+
+{id:9,title:"Expert Round: Under Pressure",week:3,sub:"Stay composed when they push you outside your comfort zone",
+know:["Panels sometimes deliberately create pressure to see how you cope","Being nervous is OK - managing it is what matters","Power posing before interview: 2 min, hands on hips (Amy Cuddy)","4-7-8 breathing: inhale 4s, hold 7s, exhale 8s","Reframe: 'I'm nervous' → 'I'm excited and ready'"],
+questions:[
+{q:"[EXPERT] We've interviewed 200 students. Most have similar grades and activities as you. Why should we remember YOU?",a:"Be boldly authentic: 'You're right - on paper, many of us look similar. But here's what you can't see on my transcript: [your unique combination]. The way I think about [unique perspective], my experience with [unusual story], and my specific vision to [concrete plan]. I'm not the most decorated applicant, but I might be the most [genuine quality: curious/determined/creative]. And I'll show it by [specific future action].'",tip:"This is your moment to be MEMORABLE. What's your unique cocktail of experiences + perspectives + dreams? Not 'I'm the best' but 'Here's what makes me DIFFERENT.'",natural:"Speak from the heart here. If you're genuinely passionate about something unusual or have a unique perspective, THIS is when to show it. Energy matters more than perfect words."},
+{q:"[EXPERT] You've been in Singapore for 6 months and you're failing a subject. Your parents want you to come home. What do you do?",a:"Show resilience AND resourcefulness: 'First: breathe. Failing one subject doesn't mean I'm failing overall. I'd (1) Identify WHY - is it the teaching style, knowledge gaps, or personal issues? (2) Get help immediately - professor office hours, study groups, learning support center. (3) Communicate honestly with parents - share my plan, ask for time. (4) Set a 2-month recovery timeline. If I asked for this scholarship, I owe it to myself and Singapore to fight before giving up. But I'd also be honest if I genuinely needed help.'",tip:"Tests RESILIENCE and PROBLEM-SOLVING under emotional pressure. They need to know you won't fall apart when things get hard (and they WILL get hard in SG's academic system).",natural:"It's powerful to admit 'This scares me, honestly. But here's what I'd do...' Vulnerability + action plan = mature candidate."},
+{q:"[EXPERT] What's something about yourself that you're still working on improving?",a:"Be genuinely vulnerable: 'I'm working on [real thing]. For example, [specific recent situation where it showed up]. I've noticed it affects [area of life]. What I'm doing about it: [concrete action]. I'm not there yet, but I'm better than [timeframe] ago. I think growth is a lifetime thing - I'll always be working on something.'",tip:"This is NOT the place for disguised strengths. Share something REAL. The panel wants to see SELF-AWARENESS and GROWTH MINDSET. If you can't be honest about your flaws, you can't grow.",natural:"Talk about this like you'd share with a mentor you trust. Vulnerable but not dramatic. Show you're comfortable being imperfect."},
+{q:"[EXPERT] Describe a time you completely failed at something. Not 'almost failed' - actually failed.",a:"Own it fully: 'I failed at [specific thing]. Not partially - completely. Here's what happened: [story]. How I felt: [honest emotion - embarrassed, devastated, angry at myself]. What I did next: [not immediately - maybe I wallowed first, then eventually...]. What it taught me: [genuine insight that changed your behavior]. I'm actually grateful for it now because [how it shaped you].'",tip:"Everyone fails. What matters is: (1) Can you admit it without excuses? (2) Did you learn something real? (3) Are you better for it? A well-told failure story is MORE impressive than a success story.",natural:"This should feel like confiding in someone. Let the emotion come through - the embarrassment, the recovery, the growth. THAT'S what makes it powerful."}
+],checklist:["Practiced breathing technique (4-7-8) daily","Done power poses before mock interviews","Prepared my 'unique value' statement (what makes me different)","Have a genuine failure story I can tell with growth","Comfortable showing vulnerability in answers"]},
+
+{id:10,title:"Expert Round: Final Mastery",week:3,sub:"The finishing touches that separate good from unforgettable",
+know:["Last impression matters as much as first impression","'Any questions for us?' is NOT optional - always ask 1-2 smart questions","Your 30-second elevator pitch should feel effortless","Consistency: all your answers should paint the same picture of who you are","Day-of: arrive 15 min early, bring documents, smile genuinely, breathe"],
+questions:[
+{q:"[EXPERT] In one sentence, what's your life philosophy?",a:"This should feel AUTHENTIC to you. Examples: 'I believe that curiosity plus hard work can close any gap.' 'My philosophy is: leave every room better than you found it.' 'I live by: if it scares you and excites you at the same time, it's worth doing.' Pick something TRUE to how you actually live.",tip:"Don't quote someone famous. Make it YOUR words. The panel can tell if you're quoting vs. living it. Think: what phrase do you actually repeat to yourself during hard times?",natural:"This should come out like your personal mantra - something so deeply yours that you don't even have to think. If you have to think too hard, it's not authentic enough yet."},
+{q:"[EXPERT] If we called your best friend right now and asked them to describe you in 3 words, what would they say?",a:"Choose words that are REAL and connect to scholarship values: 'Knowing my best friend [name], they'd probably say [word 1] - because [quick proof], [word 2] - because [quick proof], and honestly, probably [word 3 - something imperfect but endearing]. They know me at my best AND worst.'",tip:"Include one slightly imperfect but lovable quality (e.g., 'stubborn about things I believe in', 'always late because I get lost in books'). Perfect answers sound fake.",natural:"Smile when you answer this. Think of your actual friend's face. That warmth is visible to the panel."},
+{q:"[EXPERT] What question do you wish we had asked you?",a:"USE THIS STRATEGICALLY: Share something important about yourself that hasn't come up. 'I wish you'd asked about [topic you prepared but didn't get to share]. Because [brief compelling story or point]. It's important to me because [connection to your candidacy].'",tip:"This is a GIFT from the panel - a chance to say anything you want. Prepare one great story or point that you want to share no matter what. Save it for this moment.",natural:"Be enthusiastic: 'Oh, I'm glad you asked this! I've been hoping to share...' That energy is memorable."},
+{q:"[EXPERT] Do you have any questions for us?",a:"ALWAYS ask 1-2 thoughtful questions. Options: 'What's one quality you've seen in scholars who thrived most in Singapore?' / 'How do ASEAN scholars typically contribute back to the community during their time here?' / 'What's one piece of advice you'd give to whoever gets this scholarship?' NEVER ask things on the website.",tip:"Your questions reveal what you VALUE. Asking about contribution shows service mindset. Asking about thriving shows growth mindset. Asking about advice shows humility. All good signals.",natural:"Ask like you're genuinely curious - because you should be! This is a rare chance to get wisdom from people who've seen hundreds of scholars succeed and struggle."},
+{q:"[FINAL] Summarize in 30 seconds why you deserve this scholarship.",a:"Elevator pitch template: 'I'm [Name], a [core quality] student from Vietnam who [top achievement]. I'm passionate about [field] because [personal reason]. Singapore's [specific opportunity] is exactly what I need to [specific goal]. I'll contribute to [community/ASEAN/Singapore] by [specific plan]. I'm ready - not just academically, but as a person ready to grow, serve, and represent Vietnam proudly.'",tip:"Practice until it flows like water - not memorized, but OWNED. You should be able to deliver this naturally whether you're half-asleep or fully nervous. That's when it's ready.",natural:"This should feel like a promise, not a presentation. Look them in the eyes. Mean every word. If you don't mean it, rewrite it until you do."}
+],checklist:["Completed all 9 previous rounds","Checked all answers are CONSISTENT with each other","30-second pitch feels natural (not memorized)","Prepared 3 questions to ask the panel","Planned logistics: time, place, documents, outfit","Backup plan if something goes wrong day-of","Slept well, ate well, feel READY","Trust myself - I've done the work!"]}
+];
+
+// ===== SINGAPORE KNOWLEDGE (all in English) =====
+const sgData = {
+history: {
+    title: "History of Singapore",
+    img: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&q=80",
+    content: `<p><strong>From Fishing Village to Global City:</strong> Singapore's transformation is one of history's most remarkable stories. Founded as a British trading post in 1819 by Sir Stamford Raffles, Singapore became independent in 1965 under Lee Kuan Yew's leadership.</p>
+    <p><strong>Key milestones:</strong></p>
+    <ul>
+    <li><strong>1819:</strong> Raffles established a trading post, attracting merchants from across Asia</li>
+    <li><strong>1942-1945:</strong> Japanese occupation during WWII - a defining traumatic period</li>
+    <li><strong>1959:</strong> Self-governance achieved, Lee Kuan Yew became first Prime Minister</li>
+    <li><strong>1963:</strong> Merged with Malaysia briefly</li>
+    <li><strong>1965:</strong> Full independence on August 9 (National Day) - separated from Malaysia</li>
+    <li><strong>1965-2000:</strong> Rapid industrialization, education reform, public housing revolution</li>
+    <li><strong>2000-present:</strong> Became global financial hub, innovation leader, education powerhouse</li>
+    </ul>
+    <p><strong>Why this matters for your interview:</strong> Singapore's story of transforming from poverty to prosperity in one generation through education, meritocracy, and strategic thinking is WHY the ASEAN Scholarship exists - they believe in investing in talent to drive national progress.</p>`
+},
+people: {
+    title: "People & Culture",
+    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80",
+    content: `<p><strong>A Multicultural Society by Design:</strong> Singapore deliberately built a harmonious multiracial society with four main ethnic groups:</p>
+    <ul>
+    <li><strong>Chinese (74%):</strong> Largest group, diverse dialects (Hokkien, Teochew, Cantonese, Mandarin)</li>
+    <li><strong>Malay (13%):</strong> Indigenous people of the region, Muslim majority</li>
+    <li><strong>Indian (9%):</strong> Tamil, Malayalam, Hindi communities, diverse religions</li>
+    <li><strong>Eurasian & Others (4%):</strong> Mixed heritage, various backgrounds</li>
+    </ul>
+    <p><strong>4 Official Languages:</strong> English (business/education), Mandarin, Malay (national language), Tamil</p>
+    <p><strong>Core Values:</strong></p>
+    <ul>
+    <li><strong>Meritocracy:</strong> Success based on ability and hard work, regardless of background</li>
+    <li><strong>Racial Harmony:</strong> Annual Racial Harmony Day (July 21), laws against hate speech</li>
+    <li><strong>Kiasu mentality:</strong> "Afraid to lose" - drives competitiveness and excellence</li>
+    <li><strong>Pragmatism:</strong> Practical solutions over ideology</li>
+    <li><strong>Respect for education:</strong> Teachers are highly valued professionals</li>
+    </ul>
+    <p><strong>For your interview:</strong> Show you APPRECIATE multicultural living and can name specific aspects of Singapore culture you find interesting. Mentioning Racial Harmony Day or hawker center culture shows research depth.</p>`
+},
+environment: {
+    title: "Living Environment",
+    img: "https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=600&q=80",
+    content: `<p><strong>City in a Garden:</strong> Despite being one of the world's most densely populated countries, Singapore is remarkably green and livable.</p>
+    <p><strong>Daily Life:</strong></p>
+    <ul>
+    <li><strong>Housing:</strong> 80% live in HDB (public housing) flats - clean, safe, affordable</li>
+    <li><strong>Transport:</strong> World-class MRT system, buses, very walkable. No need for a car</li>
+    <li><strong>Safety:</strong> One of safest cities globally - walk alone at midnight safely</li>
+    <li><strong>Food:</strong> Hawker centers everywhere - delicious meals for $3-5 SGD</li>
+    <li><strong>Climate:</strong> Tropical (28-32°C year-round), similar to Vietnam. Sudden rain showers common</li>
+    <li><strong>Cost:</strong> Expensive for housing/cars, but student life is manageable with scholarship stipend</li>
+    </ul>
+    <p><strong>Green Initiatives:</strong></p>
+    <ul>
+    <li>Gardens by the Bay, Botanic Gardens (UNESCO site)</li>
+    <li>SG Green Plan 2030 - carbon reduction, green transport</li>
+    <li>Goal: 80% green buildings by 2030</li>
+    <li>Urban farms on rooftops - "30 by 30" food security plan</li>
+    </ul>
+    <p><strong>For your interview:</strong> Mention specific places (Gardens by the Bay, East Coast Park) and initiatives (Green Plan 2030) to show you've imagined your life there, not just your studies.</p>`
+},
+education: {
+    title: "Education System",
+    img: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
+    content: `<p><strong>World #1 in Education (PISA Rankings):</strong> Singapore's education system is the benchmark for the world.</p>
+    <p><strong>Structure:</strong></p>
+    <ul>
+    <li><strong>Primary (6 years):</strong> Foundation in English, Mother Tongue, Math, Science</li>
+    <li><strong>Secondary (4-5 years):</strong> Express, Normal (Academic), Normal (Technical) streams</li>
+    <li><strong>Pre-University (2 years):</strong> Junior Colleges (A-Levels) or Polytechnics</li>
+    <li><strong>University:</strong> NUS (#1 Asia), NTU (#2 Asia), SMU, SUTD, SIT, SUSS</li>
+    </ul>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+    <li><strong>Bilingual policy:</strong> All students learn English + Mother Tongue language</li>
+    <li><strong>Meritocracy:</strong> Advancement based purely on ability and effort</li>
+    <li><strong>Applied learning:</strong> Strong emphasis on practical application, not just theory</li>
+    <li><strong>Critical thinking:</strong> Moving away from rote learning toward innovation</li>
+    <li><strong>Holistic education:</strong> CCAs (Co-Curricular Activities) are mandatory, not optional</li>
+    <li><strong>Teacher quality:</strong> Teachers recruited from top 30% of graduates, well-paid</li>
+    </ul>
+    <p><strong>As an ASEAN Scholar:</strong> You'll attend a selected secondary school or JC, take O-Levels or A-Levels, with full support including tuition, living allowance, and pastoral care.</p>`
+},
+student_life: {
+    title: "Student Life in Singapore",
+    img: "https://images.unsplash.com/photo-1523050854058-8df90110c8f1?w=600&q=80",
+    content: `<p><strong>What to expect as an international student:</strong></p>
+    <ul>
+    <li><strong>Accommodation:</strong> School hostel or approved boarding - safe, supervised, social</li>
+    <li><strong>Daily routine:</strong> School 7:30am-2pm, CCAs 3-6pm, self-study evening</li>
+    <li><strong>CCAs:</strong> Mandatory! Sports, performing arts, uniformed groups, clubs - this is where friendships form</li>
+    <li><strong>Food:</strong> School canteen + nearby hawker centers. Halal, vegetarian, all options available</li>
+    <li><strong>Weekend:</strong> Explore the city, study, meet friends, part-time tutoring (some scholars do)</li>
+    <li><strong>Support:</strong> Pastoral care teachers, school counselors, scholar alumni network</li>
+    </ul>
+    <p><strong>Social Life:</strong></p>
+    <ul>
+    <li>Mix of local Singaporeans + scholars from Vietnam, Indonesia, Malaysia, Thailand, Myanmar, Philippines, etc.</li>
+    <li>Your cohort becomes family - scholars often stay close for life</li>
+    <li>Cultural events: Hari Raya, Chinese New Year, Deepavali, Christmas - celebrate ALL</li>
+    <li>Weekend activities: Sentosa, East Coast Park, museums, libraries, shopping (Orchard Road)</li>
+    </ul>
+    <p><strong>Challenges to prepare for:</strong></p>
+    <ul>
+    <li>Academic intensity - Singapore students are VERY competitive</li>
+    <li>Homesickness - normal in first 3 months, gets better</li>
+    <li>Language adjustment - everyone speaks English but Singlish can be confusing at first</li>
+    <li>Independence - managing your own time, laundry, budget</li>
+    </ul>
+    <p><strong>For your interview:</strong> Show you understand both the excitement AND challenges. 'I know it won't be easy, but I'm ready because...' shows maturity.</p>`
+}
+};
+
+// ===== INTERVIEW SKILLS (Natural Communication) =====
+const skillsData = [
+{title:"The Art of Being Natural",icon:"🎭",content:`
+<p><strong>The #1 mistake:</strong> Memorizing answers word-for-word. Panels interview hundreds of students - they can spot a rehearsed answer in 3 seconds.</p>
+<p><strong>The goal:</strong> Sound like you're having a thoughtful conversation with someone you respect - not performing a speech.</p>
+<h4>How to Practice Naturally:</h4>
+<ul>
+<li><strong>Memorize POINTS, not SCRIPTS:</strong> Know your 3-4 key ideas, but say them differently every time</li>
+<li><strong>The Coffee Shop Test:</strong> Could you give this answer while sitting in a cafe with a friend? If not, it's too formal</li>
+<li><strong>Record yourself 10 times:</strong> If version 1 and version 10 sound identical, you're memorizing. They should be similar in content but different in delivery</li>
+<li><strong>Practice with different people:</strong> Tell the same story to your mom, your friend, your teacher. Notice how you naturally adjust</li>
+<li><strong>Embrace imperfection:</strong> "Um", pauses, self-corrections ("actually, let me rephrase that") are NORMAL and make you sound human</li>
+</ul>`},
+
+{title:"Body Language That Builds Trust",icon:"🤝",content:`
+<p><strong>55% of communication is non-verbal.</strong> Your body speaks before your mouth opens.</p>
+<h4>Do:</h4>
+<ul>
+<li><strong>Eye contact:</strong> Look at the person asking (not staring - natural 3-5 second glances). If panel of 3, distribute eye contact but focus on who asked</li>
+<li><strong>Smile genuinely:</strong> Not a frozen smile - a warm, natural one that comes and goes. Smile especially when talking about things you love</li>
+<li><strong>Sit tall but relaxed:</strong> Lean slightly forward (shows interest). Don't slouch or sit rigidly</li>
+<li><strong>Hands:</strong> Visible on the table, use natural gestures when speaking. Steeple fingers when listening</li>
+<li><strong>Nod:</strong> When listening to questions, nod gently to show you're engaged</li>
+</ul>
+<h4>Don't:</h4>
+<ul>
+<li>Cross arms (defensive), fidget with pen/hair, look at ceiling (seems dishonest), tap feet, check time</li>
+<li>Over-gesture (looks manic), zero gesture (looks robotic)</li>
+</ul>
+<h4>Power Move:</h4>
+<p>When you enter: stand tall, make eye contact with each panel member, smile, say "Good morning/afternoon" clearly, wait to be asked to sit. First impression takes 7 seconds.</p>`},
+
+{title:"Voice & Pace Control",icon:"🎙️",content:`
+<p><strong>How you sound matters as much as what you say.</strong></p>
+<h4>Key Techniques:</h4>
+<ul>
+<li><strong>Pace:</strong> Slightly slower than normal conversation. Nervousness makes us speed up - consciously slow down 10%</li>
+<li><strong>Pauses:</strong> After being asked a question, pause 2-3 seconds before answering. Shows thoughtfulness. After key points, pause briefly to let them land</li>
+<li><strong>Volume:</strong> Project clearly but don't shout. Imagine speaking to someone 2 meters away</li>
+<li><strong>Tone variation:</strong> Monotone = boring. Vary your pitch naturally. Higher when excited, lower when serious, normal for explanation</li>
+<li><strong>Emphasis:</strong> Stress KEY words in your sentence: "I'm PASSIONATE about this because..."</li>
+</ul>
+<h4>Practice Exercise:</h4>
+<p>Record yourself answering "Tell me about yourself" 5 times. Listen back. Mark where you speed up (= nervous), where you go monotone (= lost), where you sound natural (= keep this!).</p>`},
+
+{title:"Handling Difficult Moments",icon:"💪",content:`
+<p><strong>Things WILL go wrong. Here's your recovery toolkit:</strong></p>
+<h4>If you blank out:</h4>
+<ul>
+<li>"That's a great question. Let me take a moment to think about this properly."</li>
+<li>Take a breath. Gather ONE thought. Start with that one thought - the rest will follow.</li>
+<li>If still stuck: "I haven't thought deeply about this before, but my initial instinct is..." (then think out loud)</li>
+</ul>
+<h4>If you don't understand the question:</h4>
+<ul>
+<li>"Could you rephrase that? I want to make sure I address what you're really asking."</li>
+<li>"Just to clarify - are you asking about X or about Y?"</li>
+<li>NEVER pretend you understood. A wrong answer is worse than asking for clarification.</li>
+</ul>
+<h4>If you make a mistake or say something wrong:</h4>
+<ul>
+<li>"Actually, let me correct myself - what I meant was..."</li>
+<li>"Sorry, that didn't come out right. What I'm trying to say is..."</li>
+<li>Self-correction shows self-awareness. It's a STRENGTH.</li>
+</ul>
+<h4>If a question is deliberately challenging or provocative:</h4>
+<ul>
+<li>Don't get defensive. Breathe. Say "That's an interesting way to frame it..."</li>
+<li>They may be testing composure, not actually disagreeing with you.</li>
+</ul>`},
+
+{title:"The Conversation Mindset",icon:"💬",content:`
+<p><strong>The biggest secret:</strong> An interview is a CONVERSATION, not an interrogation.</p>
+<h4>Shift your thinking:</h4>
+<ul>
+<li><strong>Old mindset:</strong> "They're testing me and I must give perfect answers"</li>
+<li><strong>New mindset:</strong> "We're having a conversation about my future, and I'm sharing my genuine story"</li>
+</ul>
+<h4>Conversation techniques:</h4>
+<ul>
+<li><strong>Bridge phrases:</strong> "That reminds me of..." / "Building on that..." / "What excites me about this is..."</li>
+<li><strong>Acknowledge the question:</strong> "That's something I think about a lot, actually..." / "Great question - I've experienced this firsthand..."</li>
+<li><strong>Be human:</strong> "Honestly..." / "I'll be real with you..." / "This is something I'm still figuring out, but..."</li>
+<li><strong>Show enthusiasm:</strong> "Oh, I love talking about this!" (only if genuine)</li>
+<li><strong>Invite dialogue:</strong> End some answers with "Does that make sense?" or slight pause inviting follow-up</li>
+</ul>
+<h4>The 3-Part Natural Answer:</h4>
+<ol>
+<li><strong>Hook:</strong> One sentence that shows you engaged with the question ("Honestly, I've thought about this a lot since...")</li>
+<li><strong>Core:</strong> Your main 2-3 points with supporting stories</li>
+<li><strong>Landing:</strong> Connect back to your goals/the scholarship ("...and that's exactly why being in Singapore matters to me")</li>
+</ol>`},
+
+{title:"Pre-Interview Routine",icon:"⚡",content:`
+<p><strong>The night before:</strong></p>
+<ul>
+<li>Review key points (not memorize). Flip through your notes casually</li>
+<li>Lay out outfit, documents, prepare bag</li>
+<li>Do something relaxing - movie, music, walk</li>
+<li>Sleep by 10pm. Set 2 alarms</li>
+<li>Tell yourself: "I've prepared well. Tomorrow I just need to be myself."</li>
+</ul>
+<p><strong>Morning of:</strong></p>
+<ul>
+<li>Wake up with enough time to NOT rush</li>
+<li>Eat breakfast (brain needs fuel)</li>
+<li>Review your elevator pitch casually in the mirror - just once</li>
+<li>Arrive 15-20 minutes early</li>
+</ul>
+<p><strong>10 minutes before (find a private spot):</strong></p>
+<ul>
+<li><strong>Power Pose:</strong> Stand tall, hands on hips, chin up for 2 minutes (Amy Cuddy method)</li>
+<li><strong>Breathe:</strong> 4-7-8 technique three times (inhale 4s, hold 7s, exhale 8s)</li>
+<li><strong>Affirm:</strong> "I am prepared. I am interesting. I belong here."</li>
+<li><strong>Smile:</strong> Force a big smile for 30 seconds - tricks your brain into feeling confident</li>
+<li><strong>Reframe anxiety:</strong> "This feeling is EXCITEMENT, not fear"</li>
+</ul>
+<p><strong>Walking in:</strong> Shoulders back. Smile. Eye contact. Deep breath. You've got this.</p>`}
+];
+
+// ===== STATE =====
+let done = JSON.parse(localStorage.getItem('a_done') || '[]');
+let checks = JSON.parse(localStorage.getItem('a_checks') || '{}');
+let cur = 0;
+let tab = 'mod'; // mod, sg, sk, res
+
+// ===== INIT =====
+function init() { renderTabs(); renderMod(0); updateProg(); }
+
+function renderTabs() {
+    let h = M.map((m,i) => `<div class="tab ${tab==='mod'&&i===cur?'active':''}" onclick="goMod(${i})">${done.includes(i)?'✅':''}V${m.id}</div>`).join('');
+    h += `<div class="tab ${tab==='sg'?'active':''}" onclick="goTab('sg')" style="color:#e74c3c;font-weight:700">🇸🇬 Singapore</div>`;
+    h += `<div class="tab ${tab==='sk'?'active':''}" onclick="goTab('sk')" style="color:#6a1b9a;font-weight:700">🎯 Skills</div>`;
+    h += `<div class="tab ${tab==='res'?'active':''}" onclick="goTab('res')" style="color:#0277bd;font-weight:700">📚 Resources</div>`;
+    document.getElementById('tabs').innerHTML = h;
+}
+
+function hideAll() { ['main','sgPage','skPage','resPage'].forEach(id => document.getElementById(id).classList.add('hidden')); }
+
+function goMod(i) { tab='mod'; cur=i; hideAll(); document.getElementById('main').classList.remove('hidden'); renderTabs(); renderMod(i); }
+function goTab(t) { tab=t; hideAll(); document.getElementById(t==='sg'?'sgPage':t==='sk'?'skPage':'resPage').classList.remove('hidden'); renderTabs(); if(t==='sg')renderSG(); else if(t==='sk')renderSK(); else renderRes(); }
+
+function updateProg() {
+    let p = (done.length/10)*100;
+    document.getElementById('pf').style.width = p+'%';
+    document.getElementById('pt').textContent = `${done.length}/10 rounds completed (${Math.round(p)}%)`;
+}
+
+// ===== RENDER MODULE =====
+function renderMod(i) {
+    const m = M[i];
+    const wc = m.week===1?'bw1':m.week===2?'bw2':'bw3';
+    const isExpert = i >= 7;
+    let h = `<span class="badge ${wc}">Week ${m.week}</span> ${isExpert?'<span class="badge bex">EXPERT LEVEL</span>':''}
+    <h2 style="color:#0f2027;margin:5px 0">${isExpert?'🔥':'📘'} Round ${m.id}: ${m.title}</h2>
+    <p style="color:#666;margin-bottom:15px">${m.sub}</p>`;
+
+    // Gallery
+    const imgs = [
+        ["https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=300&q=80","Marina Bay Sands"],
+        ["https://images.unsplash.com/photo-1496939376851-89342e90adcd?w=300&q=80","Singapore Skyline"],
+        ["https://images.unsplash.com/photo-1506351421178-63b52a2d2562?w=300&q=80","Gardens by the Bay"]
+    ];
+    h += `<div class="gal">${imgs.map(([s,l])=>`<div class="gal-i"><img src="${s}" alt="${l}" loading="lazy"><span>${l}</span></div>`).join('')}</div>`;
+
+    // Knowledge
+    h += `<div class="card"><h3>📚 Key Knowledge</h3><ul>${m.know.map(k=>`<li>${k}</li>`).join('')}</ul></div>`;
+
+    // Questions
+    h += `<div class="card"><h3>${isExpert?'🔥 Expert Interview Questions':'❓ Interview Questions & Guidance'}</h3>`;
+    m.questions.forEach((q,qi) => {
+        h += `<div class="qbox"><strong>Q: ${q.q}</strong></div>
+        <button class="btn btn-s" onclick="tog('a${i}_${qi}')">👁 Show Guidance</button>
+        <div class="abox" id="a${i}_${qi}"><strong>💡 Guidance:</strong><p style="margin-top:6px">${q.a}</p></div>
+        <div class="tbox"><strong>🎯 Strategy:</strong> ${q.tip}</div>`;
+        if(q.natural) h += `<div class="nbox"><strong>🗣️ Natural Communication Tip:</strong> ${q.natural}</div>`;
+        h += `<hr class="hr">`;
+    });
+    h += `</div>`;
+
+    // Checklist
+    h += `<div class="card"><h3>✅ Self-Check</h3><ul class="cklist">${m.checklist.map((c,ci)=>{
+        const k=`${i}_${ci}`, ck=checks[k]?'done':'';
+        return `<li class="${ck}" onclick="chk('${k}',this)">${c}</li>`;
+    }).join('')}</ul></div>`;
+
+    // Buttons
+    h += `<div style="text-align:center;margin-top:15px">`;
+    if(!done.includes(i)) h += `<button class="btn btn-g" onclick="fin(${i})">✅ Complete Round ${m.id}</button>`;
+    else h += `<span style="color:#2e7d32;font-weight:bold">✅ Completed!</span>`;
+    if(i<9) h += ` <button class="btn btn-b" onclick="goMod(${i+1})">Next Round ➡️</button>`;
+    h += `</div>`;
+
+    document.getElementById('main').innerHTML = h;
+}
+
+function tog(id) { const e=document.getElementById(id); e.style.display=e.style.display==='block'?'none':'block'; }
+function chk(k,el) { el.classList.toggle('done'); checks[k]=el.classList.contains('done'); localStorage.setItem('a_checks',JSON.stringify(checks)); }
+function fin(i) { if(!done.includes(i)){done.push(i);localStorage.setItem('a_done',JSON.stringify(done));} updateProg(); renderTabs(); renderMod(i); }
+
+// ===== RENDER SINGAPORE =====
+function renderSG() {
+    let h = `<h2 style="color:#0f2027;margin-bottom:5px">🇸🇬 Discover Singapore</h2>
+    <p style="color:#666;margin-bottom:18px">Everything you need to know - all in English for interview preparation</p>`;
+    Object.values(sgData).forEach(s => {
+        h += `<div class="sg-sec">
+            <div class="gal" style="margin-bottom:10px"><div class="gal-i" style="height:140px;grid-column:1/-1"><img src="${s.img}" alt="${s.title}" loading="lazy"><span>${s.title}</span></div></div>
+            <h3>${s.title}</h3>${s.content}</div>`;
+    });
+    document.getElementById('sgPage').innerHTML = h;
+}
+
+// ===== RENDER SKILLS =====
+function renderSK() {
+    let h = `<h2 style="color:#0f2027;margin-bottom:5px">🎯 Natural Interview Skills</h2>
+    <p style="color:#666;margin-bottom:18px">How to sound confident, authentic, and memorable - not robotic</p>`;
+    skillsData.forEach(s => {
+        h += `<div class="card" style="border-left-color:#7e57c2"><h3>${s.icon} ${s.title}</h3>${s.content}</div>`;
+    });
+    document.getElementById('skPage').innerHTML = h;
+}
+
+// ===== RENDER RESOURCES =====
+function renderRes() {
+    const res = [
+        {cat:"🏛️ Official Sources (Must Read)",items:[
+            {t:"MOE Singapore - ASEAN Scholarships Vietnam",u:"https://www.moe.gov.sg/financial-matters/awards-scholarships/asean-scholarships/vietnam",d:"Official scholarship page - eligibility, timeline, benefits",b:"official"},
+            {t:"Singapore Embassy Hanoi - AY2027",u:"https://hanoi.mfa.gov.sg/mission-updates/aseanscholarshipay2027/",d:"Latest application announcement from Embassy",b:"official"},
+            {t:"NTU ASEAN Undergraduate Scholarship",u:"https://www.ntu.edu.sg/admissions/undergraduate/scholarships/asean-scholarship",d:"NTU scholarship details - allowance, bond, benefits",b:"official"},
+            {t:"MOE - Education in Singapore",u:"https://www.moe.gov.sg/education-in-sg",d:"Comprehensive overview of SG education system",b:"official"},
+            {t:"Singapore Smart Nation",u:"https://www.smartnation.gov.sg",d:"Digital government initiatives - great interview topic",b:"official"}
+        ]},
+        {cat:"📺 YouTube Channels (Subscribe These)",items:[
+            {t:"After School TV",u:"https://www.youtube.com/@AfterSchoolTV",d:"10 scholarship interview questions with answers",b:"video"},
+            {t:"Self Made Millennial (Madeline Mann)",u:"https://www.youtube.com/@SelfMadeMillennial",d:"HR expert, 500K+ subs. Interview tips, body language",b:"video"},
+            {t:"Linda Raynier",u:"https://www.youtube.com/@LindaRaynier",d:"Career strategist, ~1M subs. Confidence & communication",b:"video"},
+            {t:"Charisma on Command",u:"https://www.youtube.com/@CharismaOnCommand",d:"Body language, first impressions, confidence",b:"video"},
+            {t:"Ben Talks Talent",u:"https://www.youtube.com/@BenTalksTalent",d:"Interview questions deep-dives, mock interviews",b:"video"},
+            {t:"BBC Learning English",u:"https://www.youtube.com/@BBCLearningEnglish",d:"Daily English practice - pronunciation, speaking",b:"video"},
+            {t:"TED Talks",u:"https://www.youtube.com/@TED",d:"Watch: Amy Cuddy (Power Posing), Simon Sinek (Start with Why)",b:"video"},
+            {t:"English with Lucy",u:"https://www.youtube.com/@EnglishwithLucy",d:"British pronunciation, formal English for interviews",b:"video"}
+        ]},
+        {cat:"📝 Articles & Guides",items:[
+            {t:"ASEAN Scholarship Test & Interview Prep",u:"https://geniebook.com/exam-preparation/asean/article/asean-scholarship-selection-test-interview-how-prepare-it",d:"Complete preparation guide for ASEAN selection process",b:"article"},
+            {t:"Scholarship Interview: Rule of Six",u:"https://blog.scholarshipguide.com.sg/scholarship-interview-the-rule-of-six/",d:"6 rules to stand out in SG scholarship interviews",b:"article"},
+            {t:"20 Common Scholarship Questions - Indeed",u:"https://www.indeed.com/career-advice/interviewing/common-scholarship-interview",d:"20 questions with answer strategies",b:"article"},
+            {t:"How to Ace Scholarship Interview",u:"https://shawn-seah.medium.com/how-to-ace-an-undergraduate-scholarship-interview-b8becc0956d0",d:"Insider tips from SG scholarship recipient",b:"article"}
+        ]},
+        {cat:"💬 Experience & Tools",items:[
+            {t:"ASEAN Scholarship Interview Simulator",u:"https://tdaniel.neocities.org/aseanscholar.html",d:"Interactive practice tool - simulate real interview scenarios",b:"tool"},
+            {t:"ASEAN Scholar Experience Blog",u:"https://lagrossepomme.home.blog/2019/10/29/asean-scholarship-singapore/",d:"Real scholar sharing their full application journey",b:"blog"},
+            {t:"Phuong Nguyen - ASEAN Scholar at NTU",u:"https://blogs.ntu.edu.sg/nbsgradstudies/2024/10/30/from-challenge-conqueror-to-asean-development-scholar/",d:"Vietnamese student's journey to NTU scholarship",b:"blog"},
+            {t:"ELSA Speak - Pronunciation AI",u:"https://elsaspeak.com",d:"AI app to fix pronunciation - use 15 min daily",b:"tool"}
+        ]},
+        {cat:"📖 Recommended Books",items:[
+            {t:"How to Win Friends & Influence People",u:"https://www.goodreads.com/book/show/4865",d:"Dale Carnegie - communication skills for interviews",b:"book"},
+            {t:"Mindset: Psychology of Success",u:"https://www.goodreads.com/book/show/40745",d:"Carol Dweck - growth mindset (what panels look for)",b:"book"},
+            {t:"Outliers",u:"https://www.goodreads.com/book/show/3228917",d:"Malcolm Gladwell - success, opportunity, culture",b:"book"}
+        ]}
+    ];
+    let h = `<h2 style="color:#0f2027;margin-bottom:5px">📚 Study Resources & Video Guides</h2>
+    <p style="color:#666;margin-bottom:18px">Curated materials for your 3-week preparation journey</p>`;
+    const colors = {official:'#c62828',video:'#d32f2f',article:'#0277bd',tool:'#2e7d32',blog:'#ef6c00',book:'#6a1b9a'};
+    res.forEach(r => {
+        h += `<div class="card"><h3>${r.cat}</h3>`;
+        r.items.forEach(it => {
+            h += `<a href="${it.u}" target="_blank" rel="noopener" class="rlink"><div><span class="rbadge" style="background:${colors[it.b]}">${it.b.toUpperCase()}</span><span class="rt">${it.t}</span></div><div class="rd">${it.d}</div></a>`;
+        });
+        h += `</div>`;
+    });
+    // Study schedule
+    h += `<div class="card" style="border-left-color:#2e7d32;background:#f1f8e9"><h3>📅 3-Week Reading Plan</h3>
+    <p><strong>Week 1:</strong> Read all Official sources + watch 3 basic interview videos + start ELSA Speak daily</p>
+    <p><strong>Week 2:</strong> Singapore knowledge (🇸🇬 tab) + STAR method video + read scholar blogs + try Interview Simulator</p>
+    <p><strong>Week 3:</strong> Review Amy Cuddy TED talk + final mock interviews + read latest ASEAN news + REST day before interview</p></div>`;
+    document.getElementById('resPage').innerHTML = h;
+}
+
+init();
+</script>
+</body>
+</html>
